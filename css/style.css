@@ -1,0 +1,341 @@
+:root{
+  --dark : #111417;
+  --dark-1 : #191C20;
+  --dark-grey:#25282C;
+  --primary-color:#1F8FFB;
+  --danger-color:#ED484D;
+  --warning-color:#F8C131;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+}
+.btn{
+  border: none;
+}
+ul{
+  list-style: none;
+}
+/* Path: css\style.css */
+body{
+  background-color: var(--dark-grey);
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+.dashboard header nav{
+  background-color: var(--dark);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dashboard header nav .logo{
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+.dashboard header nav .logo .hamburger {
+  background-color: var(--dark-grey);
+  border-radius: 5px;
+  margin-right: 1rem;
+}
+.dashboard header nav .logo .hamburger span{
+  padding: 0.3rem;
+}
+.dashboard header nav ul{
+  display: flex;
+  align-items: center;
+}
+.dashboard header nav ul li{
+  margin-right: 10px;
+}
+.menu .btn{
+  background-color: var(--primary-color);
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+main{
+ display: flex;
+}
+
+main aside{
+  background-color: var(--dark-1);
+  max-width: 20%;
+  min-width: 20%;
+  height: 100vh;
+  padding: 20px;
+  overflow-y: scroll;
+}
+main aside ul li{
+  margin-bottom: 20px;
+}
+main aside ul li:hover span{
+  color: var(--primary-color);
+}
+main aside ul li:hover h3{
+  color: var(--primary-color);
+}
+main aside ul li a{
+  color: #fff;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+
+main aside .menu li span{
+  color: #C8C8C9;
+  display: block;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  font-weight: 200;
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+}
+main aside .menu li h3{
+  font-weight: 200;
+  font-size: 1rem;
+
+}
+/* main aside .menu li h3:hover{
+  color: var(--primary-color);
+}
+main aside .menu span:hover{
+  color: var(--primary-color);
+} */
+main aside .profile{
+  margin-bottom: 1.8rem;
+}
+main aside .search input{
+  background-color: var(--dark-grey);
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 500;
+}
+main aside .components{
+
+margin-top: 1rem;
+}
+main aside .garis{
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--dark-grey);
+  margin:0.3rem 0;
+}
+main .content{
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  overflow-y: scroll;
+}
+.card-content{
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1.4rem;
+}
+.card-content .card-item{
+  background-color: var(--dark-1);
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.card-content .card-item .card-item-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-content .card-item .card-item-header h1{
+  font-size: 1.4rem;
+}
+.card-content .card-item .card-item-header span{
+  font-size: 3rem;
+}
+.card-content .card-item .card-item-body{
+  margin-top: 1rem;
+}
+.card-content .user {
+  background-image: linear-gradient(to bottom, var(--primary-color), rgb(63, 63, 255)  );
+ 
+}
+.card-content .barang {
+  background-image: linear-gradient(to bottom,  yellow,var(--warning-color)) ;
+}
+.card-content  .customers {
+  background-image: linear-gradient(to bottom, var(--danger-color), red  );
+}
+.card-content .price{
+  background-image: linear-gradient(to bottom,rgb(107, 251, 203),green);
+}
+
+.content2 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.4rem;
+}
+.content2 .data-barang{
+  background-color: var(--dark-1);
+  padding: 1rem;
+  border-radius: 5px;
+}
+.content2 .data-barang table{
+  width: 100%;
+}
+.content2 .data-barang table th{
+  padding: 10px;
+  background-color: var(--dark-grey);
+}
+
+.content3 .users {
+  background-color: var(--dark-2);
+}
+
+.form-container{
+  background-color: var(--dark-1);
+  padding: 1rem;
+  border-radius: 5px;
+}
+.form-container input[type="text"],input[type="email"],input[type="password"]{
+  background-color: var(--dark-grey);
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.form-container .submit{
+  background-color: var(--primary-color);
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+.form-container select{
+  background-color: var(--dark-grey);
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.form-container textarea{
+  background-color: var(--dark-grey);
+  border: none;
+
+  padding: 10px 20px;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+
+
+.form-container input[type="file"]{
+  background-color: var(--dark-grey);
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.dark-mode-btn{
+  background-color: var(--dark-grey);
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 1rem;
+}
+.dark-mode-btn:hover{
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
+.dark-mode-btn span{
+  color: #fff;
+  font-size: 1.4rem;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.invalid-feedback{
+  color: red;
+  font-size: 0.8rem;
+  font-weight: 500;
+ margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 768px){
+  .content2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .card-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px){
+  .card-content .card-item {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .card-content .card-item .card-item-header h1{
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .card-content .card-item .card-item-header span{
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .card-content .card-item .card-item-body{
+    margin-top: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .card-content .card-item .card-item-body p{
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .card-content .card-item .card-item-body p span{
+    font-size: 1rem;
+  }
+}
+

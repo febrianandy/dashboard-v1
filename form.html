@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+ 
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+   
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Dashboard</title>
+</head>
+<body>
+  <div class="dashboard">
+    <header>
+      <nav>
+        <div class="logo">
+          <div class="hamburger">
+            <span class="material-symbols-rounded">menu</span>
+          </div>
+          <h1>Dashboard</h1>
+        </div>
+        <div class="menu">
+          <ul>
+            <div class="profile">
+             <div class="img-profil">
+                <img src="img/1.jpg" alt="">
+             </div>
+            </div>
+            <button class="btn" type="submit">Get Started</button>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <aside>
+        <div class="profile">
+          <div class="search">
+            <input type="text" placeholder="Search">
+          </div>
+        </div>
+        <div class="menu">
+          <ul>
+            <li>
+              <a href="#">
+                <span class="material-symbols-rounded">home</span>
+                <h3>Home</h3>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="material-symbols-rounded">
+                  dashboard
+                  </span>
+                <h3>Dashboard</h3>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="material-symbols-rounded">
+                  account_circle
+                  </span>
+                <h3>Profile</h3>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="material-symbols-rounded">settings</span>
+                <h3>Settings</h3>
+              </a>
+            </li>
+           
+          </ul>
+          <ul>
+            <h2 class="components">Components</h2>
+            <span class="garis"></span>
+            <li>
+              <a href="#">
+                <span class="material-symbols-rounded">
+                  list_alt
+                  </span>
+                <h3>Form</h3>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="material-symbols-rounded">
+                  view_list
+                  </span>
+                <h3>Table</h3>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="material-symbols-rounded">
+                  lightbulb_circle
+                  </span>
+                <h3>Modal</h3>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="material-symbols-rounded">
+                  campaign
+                  </span>
+                <h3>Alert</h3>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="material-symbols-rounded">
+                  view_agenda
+                  </span>
+                <h3>Card</h3>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </aside>
+      <div class="content">
+       <div class="card">
+        <div class="card-header">
+          <h1>Form</h1>
+          <div class="form-container">
+            <div>
+              <input type="text" placeholder="Email">
+              <div class="invalid-feedback">
+                Please enter a valid email address for shipping updates.
+              </div>
+            </div>
+            <div>
+              <input type="password" placeholder="Password">
+              <div class="invalid-feedback">
+                Please enter a valid password for shipping updates.
+              </div>
+            </div>
+            <div>
+              <select name="" id="">
+                <option value="">Html</option>
+                <option value="">CSS</option>
+                <option value="">JS</option>
+              </select>
+              <div class="invalid-feedback">
+                Please enter a valid select for shipping updates.
+              </div>
+            </div>
+            <div>
+              <input type="file">
+            </div>
+            <div >
+              <textarea name="" id="MyText" cols="30" rows="10"></textarea>
+            </div>
+            <div>
+              <button class="submit" >Submit</button>
+            </div>
+          </div>
+         
+        </div>
+       </div>
+      </div>
+    </main>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+     $('#MyText').summernote({
+        placeholder: 'Hello stand alone ui',
+        tabsize: 2,
+        height: 320,
+        toolbar: [
+          ['style', ['style']],
+          ['font', ['bold', 'underline', 'clear']],
+          ['color', ['color']],
+          ['para', ['ul', 'ol', 'paragraph']],
+          ['table', ['table']],
+          ['insert', ['link', 'picture', 'video']],
+          ['view', ['fullscreen', 'codeview', 'help']]
+        ]
+      });
+     const ctx = document.getElementById('myChart');
+
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['January', 'February', 'Maret', 'April', 'Mei', 'Juni','Juli','Agustus','September','November','Desember'],
+        datasets: [{
+          label: '# of Votes',
+          data: [12, 19, 3, 5, 2, 3,34,31,12,34,5,8],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+    const ctx2 = document.getElementById('myChart2');
+    new Chart(ctx2, {
+      type: 'doughnut',
+      data: {
+        labels: ['January', 'February', 'Maret'],
+        datasets: [{
+          label: '# of Votes',
+          data: [12, 19, 14],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+
+
+  </script>
+
+</body>
+</html>
